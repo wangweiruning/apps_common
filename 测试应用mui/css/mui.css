@@ -23,7 +23,7 @@ details,
 figcaption,
 figure,
 footer,
-header,
+er,
 hgroup,
 main,
 nav,
@@ -318,11 +318,11 @@ a:active
     top: 44px;
 }
 
-.mui-bar-header-secondary ~ .mui-content
+.mui-bar-er-secondary ~ .mui-content
 {
     padding-top: 88px;
 }
-.mui-bar-header-secondary ~ .mui-content.mui-scroll-wrapper .mui-scrollbar-vertical
+.mui-bar-er-secondary ~ .mui-content.mui-scroll-wrapper .mui-scrollbar-vertical
 {
     top: 88px;
 }
@@ -1507,7 +1507,7 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
     background: none;
 }
 
-.mui-bar-header-secondary
+.mui-bar-er-secondary
 {
     top: 44px;
 }
@@ -1651,7 +1651,7 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
 }
 
 .mui-focusin > .mui-bar-nav,
-.mui-focusin > .mui-bar-header-secondary
+.mui-focusin > .mui-bar-er-secondary
 {
     position: absolute;
 }
@@ -1785,8 +1785,8 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
     right: 12px;
 }
 
-.mui-bar.mui-bar-header-secondary .mui-input-row .mui-input-clear ~ .mui-icon-clear,
-.mui-bar.mui-bar-header-secondary .mui-input-row .mui-input-speech ~ .mui-icon-speech
+.mui-bar.mui-bar-er-secondary .mui-input-row .mui-input-clear ~ .mui-icon-clear,
+.mui-bar.mui-bar-er-secondary .mui-input-row .mui-input-speech ~ .mui-icon-speech
 {
     top: 0;
     right: 0;
@@ -1800,7 +1800,7 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
     margin: 0 auto;
 }
 
-.mui-bar.mui-bar-header-secondary .mui-segmented-control
+.mui-bar.mui-bar-er-secondary .mui-segmented-control
 {
     top: 0;
 }
@@ -1957,7 +1957,7 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
     height: 0;
 }
 
-.mui-card-header,
+.mui-card-er,
 .mui-card-footer
 {
     position: relative;
@@ -1976,7 +1976,7 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
     -webkit-align-items: center;
             align-items: center;
 }
-.mui-card-header .mui-card-link,
+.mui-card-er .mui-card-link,
 .mui-card-footer .mui-card-link
 {
     line-height: 44px;
@@ -2003,7 +2003,7 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
             align-items: center;
 }
 
-.mui-card-header:after,
+.mui-card-er:after,
 .mui-card-footer:before
 {
     position: absolute;
@@ -2020,18 +2020,18 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
     background-color: #c8c7cc;
 }
 
-.mui-card-header
+.mui-card-er
 {
     font-size: 17px;
 
     border-radius: 2px 2px 0 0;
 }
-.mui-card-header:after
+.mui-card-er:after
 {
     top: auto;
     bottom: 0;
 }
-.mui-card-header > img:first-child
+.mui-card-er > img:first-child
 {
     font-size: 0;
     line-height: 0;
@@ -2071,13 +2071,13 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
     background-size: cover;
 }
 
-.mui-card-header.mui-card-media
+.mui-card-er.mui-card-media
 {
     display: block;
 
     padding: 10px;
 }
-.mui-card-header.mui-card-media .mui-media-body
+.mui-card-er.mui-card-media .mui-media-body
 {
     font-size: 14px;
     font-weight: 500;
@@ -2088,7 +2088,7 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
 
     color: #333;
 }
-.mui-card-header.mui-card-media .mui-media-body p
+.mui-card-er.mui-card-media .mui-media-body p
 {
     font-size: 13px;
 
@@ -4818,7 +4818,7 @@ body > .mui-progressbar
     top: 44px;
 }
 
-.mui-bar-nav ~ .mui-bar-header-secondary ~ .mui-content .mui-pull-top-pocket
+.mui-bar-nav ~ .mui-bar-er-secondary ~ .mui-content .mui-pull-top-pocket
 {
     top: 88px;
 }
@@ -5589,11 +5589,11 @@ body > .mui-progressbar
 {
     top: 64px;
 }
-.mui-plus.mui-statusbar.mui-statusbar-offset .mui-bar-header-secondary
+.mui-plus.mui-statusbar.mui-statusbar-offset .mui-bar-er-secondary
 {
     top: 64px;
 }
-.mui-plus.mui-statusbar.mui-statusbar-offset .mui-bar-header-secondary ~ .mui-content
+.mui-plus.mui-statusbar.mui-statusbar-offset .mui-bar-er-secondary ~ .mui-content
 {
     padding-top: 94px;
 }

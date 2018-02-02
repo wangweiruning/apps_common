@@ -3081,8 +3081,8 @@ Function.prototype.bind = Function.prototype.bind || function(to) {
 	var serializeData = function(options) {
 		if(options.processData && options.data && typeof options.data !== "string") {
 			var contentType = options.contentType;
-			if(!contentType && options.headers) {
-				contentType = options.headers['Content-Type'];
+			if(!contentType && options.ers) {
+				contentType = options.ers['Content-Type'];
 			}
 			if(contentType && ~contentType.indexOf(jsonType)) { //application/json
 				options.data = JSON.stringify(options.data);
@@ -3143,17 +3143,17 @@ Function.prototype.bind = Function.prototype.bind || function(to) {
 			settings.url = appendQuery(settings.url, '_=' + $.now());
 		}
 		var mime = settings.accepts[dataType && dataType.toLowerCase()];
-		var headers = {};
-		var setHeader = function(name, value) {
-			headers[name.toLowerCase()] = [name, value];
+		var ers = {};
+		var seter = function(name, value) {
+			ers[name.toLowerCase()] = [name, value];
 		};
 		var protocol = /^([\w-]+:)\/\//.test(settings.url) ? RegExp.$1 : window.location.protocol;
 		var xhr = settings.xhr(settings);
-		var nativeSetHeader = xhr.setRequestHeader;
+		var nativeSeter = xhr.setRequester;
 		var abortTimeout;
 
-		setHeader('X-Requested-With', 'XMLHttpRequest');
-		setHeader('Accept', mime || '*/*');
+		seter('X-Requested-With', 'XMLHttpRequest');
+		seter('Accept', mime || '*/*');
 		if(!!(mime = settings.mimeType || mime)) {
 			if(mime.indexOf(',') > -1) {
 				mime = mime.split(',', 2)[0];
@@ -3161,13 +3161,13 @@ Function.prototype.bind = Function.prototype.bind || function(to) {
 			xhr.overrideMimeType && xhr.overrideMimeType(mime);
 		}
 		if(settings.contentType || (settings.contentType !== false && settings.data && settings.type.toUpperCase() !== 'GET')) {
-			setHeader('Content-Type', settings.contentType || 'application/x-www-form-urlencoded');
+			seter('Content-Type', settings.contentType || 'application/x-www-form-urlencoded');
 		}
-		if(settings.headers) {
-			for(var name in settings.headers)
-				setHeader(name, settings.headers[name]);
+		if(settings.ers) {
+			for(var name in settings.ers)
+				seter(name, settings.ers[name]);
 		}
-		xhr.setRequestHeader = setHeader;
+		xhr.setRequester = seter;
 
 		xhr.onreadystatechange = function() {
 			if(xhr.readyState === 4) {
@@ -3176,7 +3176,7 @@ Function.prototype.bind = Function.prototype.bind || function(to) {
 				var result, error = false;
 				var isLocal = protocol === 'file:';
 				if((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304 || (xhr.status === 0 && isLocal && xhr.responseText)) {
-					dataType = dataType || mimeToDataType(settings.mimeType || xhr.getResponseHeader('content-type'));
+					dataType = dataType || mimeToDataType(settings.mimeType || xhr.getResponseer('content-type'));
 					result = xhr.responseText;
 					try {
 						// http://perfectionkills.com/global-eval-what-are-the-options/
@@ -3223,9 +3223,9 @@ Function.prototype.bind = Function.prototype.bind || function(to) {
 
 		xhr.open(settings.type.toUpperCase(), settings.url, async, settings.username, settings.password);
 
-		for(var name in headers) {
-			if(headers.hasOwnProperty(name)) {
-				nativeSetHeader.apply(xhr, headers[name]);
+		for(var name in ers) {
+			if(ers.hasOwnProperty(name)) {
+				nativeSeter.apply(xhr, ers[name]);
 			}
 		}
 		if(settings.timeout > 0) {
